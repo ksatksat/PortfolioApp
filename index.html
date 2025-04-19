@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <!-- Header Left Container: Logo and Navigation -->
         <div class="header-left">
             <!--&reg; - this creates R symbol in text-->
-            <div class="logo">Иванов Дмитрий&reg;</div>
+            <div class="logo">Dmitriy Ivanov &reg;</div>
             <nav>
                 <ul>
                     <li><a href="#about">Обо мне</a></li>
@@ -145,26 +146,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Dark/Light Mode Toggle Script -->
-    <script>
-        // Select the toggle button and the body
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        // Function to switch themes
-        function toggleTheme() {
-            body.classList.toggle('dark-mode'); // Add/remove dark-mode class from body
-            // Update the button text based on active theme
-            if (body.classList.contains('dark-mode')) {
-                themeToggleBtn.textContent = "Light Mode";//Dark mode active – show Light Mode option
-            } else {
-                themeToggleBtn.textContent = "Dark Mode";//Light mode active – show Dark Mode option
-            }
-        }
-
-        // Listen for button clicks and call toggleTheme function
-        themeToggleBtn.addEventListener('click', toggleTheme);
-    </script>
 </body>
 </html>
