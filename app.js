@@ -61,7 +61,8 @@ const portfolio_li = document.querySelector('.header-left nav ul li:nth-child(3)
 const videos_li = document.querySelector('.header-left nav ul li:nth-child(4) a');
 const contacts_li = document.querySelector('.header-left nav ul li:nth-child(5) a');
 //about section
-
+const aboutH2 = document.querySelector('.about h2');
+const aboutP = document.querySelector('.about p');
 let data; // will hold your translations
 
 // Function to switch themes
@@ -78,10 +79,10 @@ function updateThemeToggleText() {
     const currentLang = langEl.querySelector('.active').getAttribute('language');
     if (body.classList.contains('dark-mode')) {
             //themeToggleBtn.textContent = "Light Mode";//Dark mode active – show Light Mode option
-        themeToggleBtn.textContent = data[currentLang].theme_toggle_1;
+        themeToggleBtn.textContent = data[currentLang].theme_toggle_light;
     } else {
             //themeToggleBtn.textContent = "Dark Mode";//Light mode active – show Dark Mode option
-        themeToggleBtn.textContent = data[currentLang].theme_toggle_2;
+        themeToggleBtn.textContent = data[currentLang].theme_toggle_dark;
     }
 }
 function toggleTheme(){
@@ -106,7 +107,9 @@ links.forEach(el => {
         portfolio_li.textContent = data[lang].portfolio_li_;
         videos_li.textContent = data[lang].videos_li_;
         contacts_li.textContent = data[lang].contacts_li_;
-        
+        //about section
+        aboutH2.textContent = data[lang].aboutH2_;
+        aboutP.textContent = data[lang].aboutP_;
         updateThemeToggleText();
     });
 });
@@ -127,7 +130,9 @@ fetch('./data.json')
     portfolio_li.textContent = data[defaultLang].portfolio_li_;
     videos_li.textContent    = data[defaultLang].videos_li_;
     contacts_li.textContent  = data[defaultLang].contacts_li_;
-
+    //about section
+    aboutH2.textContent = data[defaultLang].aboutH2_;
+    aboutP.textContent = data[defaultLang].aboutP_;
     // finally, set the correct toggle‐button label
     updateThemeToggleText();
   })
