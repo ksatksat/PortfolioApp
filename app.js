@@ -63,6 +63,24 @@ const contacts_li = document.querySelector('.header-left nav ul li:nth-child(5) 
 //about section
 const aboutH2 = document.querySelector('.about h2');
 const aboutP = document.querySelector('.about p');
+const aboutCBtn = document.querySelector('.contact-btn');
+//skills section
+const skillsH2 = document.querySelector('.skills h2');
+//portfolio section
+const portfolioH2 = document.querySelector('.portfolio h2');
+const pH3List = document.querySelectorAll('.portfolio-grid .portfolio-item h3');
+const portfolioH3_1 = pH3List[0];//race game
+const portfolioH3_2 = pH3List[1];//runner game
+const portfolioH3_3 = pH3List[2];//fight game
+//videos section
+const videosH2 = document.querySelector('.videos h2');
+//contacts section
+const contactsH2 = document.querySelector('.contacts h2');
+const contactsBtn = document.querySelector('.contact-form button');
+//Location section
+const locationH3 = document.querySelector('.footer-content h3');
+//social links section
+const aboutWebsite = document.querySelector('.aboutWebsite');
 let data; // will hold your translations
 
 // Function to switch themes
@@ -110,6 +128,23 @@ links.forEach(el => {
         //about section
         aboutH2.textContent = data[lang].aboutH2_;
         aboutP.textContent = data[lang].aboutP_;
+        aboutCBtn.textContent = data[lang].aboutCBtn_;
+        //skills section
+        skillsH2.textContent = data[lang].skillsH2_;
+        //portfolio section
+        portfolioH2.textContent = data[lang].portfolioH2_;
+        portfolioH3_1.textContent = data[lang].portfolioH3_1_;
+        portfolioH3_2.textContent = data[lang].portfolioH3_2_;
+        portfolioH3_3.textContent = data[lang].portfolioH3_3_;
+        //videos section
+        videosH2.textContent = data[lang].videosH2_;
+        //contacts section
+        contactsH2.textContent = data[lang].contactsH2_;
+        contactsBtn.textContent = data[lang].contactsBtn_;
+        //Location section
+        locationH3.textContent = data[lang].locationH3_;
+        //social links section
+        aboutWebsite.textContent = data[lang].aboutWebsite_;
         updateThemeToggleText();
     });
 });
@@ -133,6 +168,23 @@ fetch('./data.json')
     //about section
     aboutH2.textContent = data[defaultLang].aboutH2_;
     aboutP.textContent = data[defaultLang].aboutP_;
+    aboutCBtn.textContent = data[defaultLang].aboutCBtn_;
+    //skills section
+    skillsH2.textContent = data[defaultLang].skillsH2_;
+    //portfolio section
+    portfolioH2.textContent = data[defaultLang].portfolioH2_;
+    portfolioH3_1.textContent = data[defaultLang].portfolioH3_1_;
+    portfolioH3_2.textContent = data[defaultLang].portfolioH3_2_;
+    portfolioH3_3.textContent = data[defaultLang].portfolioH3_3_;
+    //videos section
+    videosH2.textContent = data[defaultLang].videosH2_;
+    //contacts section
+    contactsH2.textContent = data[defaultLang].contactsH2_;
+    contactsBtn.textContent = data[defaultLang].contactsBtn_;
+    //Location section
+    locationH3.textContent = data[defaultLang].locationH3_;
+    //social links section
+    aboutWebsite.textContent = data[defaultLang].aboutWebsite_;
     // finally, set the correct toggle‐button label
     updateThemeToggleText();
   })
