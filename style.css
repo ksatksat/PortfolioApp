@@ -355,3 +355,8 @@ body.dark-mode .contact-btn {
 body.dark-mode .contact-btn:hover {
     background-color: #3090ff;
 }
+
+.game_iframe{
+    display: flex;
+    justify-content: center;
+}
